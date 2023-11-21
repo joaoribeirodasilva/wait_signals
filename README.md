@@ -32,14 +32,26 @@ Bellow you will find the usage exemples.
 ```go
 package main
 
+import (
+    "fmt"
+    "os"
+    "syscall"
+    "time"
+
+    "github.com/joaoribeirodasilva/wait_signals"
+)
+
 // Example
 // SleepWait(sleep_time time.Duration, sigs ...os.Signal) os.Signal.
 func main() {
 
+    fmt.Println("wait_signals.SleepWait example")
+    fmt.Println("wait 5 seconds for a sleep timeout or press CRTL+C to exit by a signal.")
+
     // the thread will block until a timeout set by the *sleep_time*
     // parameter or until it gets a syscall.SIGINT or a syscall.SIGTERM
     // signal (Ex: CTRL+C).
-    sig := wait_signal.SleepWait(
+    sig := wait_signals.SleepWait(
         time.Duration(5000) * time.Millisecond, // sleep for 5 seconds.
         syscall.SIGINT, // wait for syscall.SIGINT.
         syscall.SIGTERM, // or for syscall.SIGTERM.
@@ -70,7 +82,7 @@ func main() {
 
     // the thread will block until it gets a syscall.SIGINT 
     // or a syscall.SIGTERM signal (Ex: CTRL+C).
-    sig := wait_signal.Wait(syscall.SIGINT, syscall.SIGTERM)
+    sig := wait_signals.Wait(syscall.SIGINT, syscall.SIGTERM)
 
     // the sig return which signal was received.
     if sig == syscall.SIGINT {
