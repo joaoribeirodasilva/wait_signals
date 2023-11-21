@@ -6,7 +6,6 @@ This library has a BSD 3-Clause License.
 
 Use it has you will.
 
-
 ## Disclaimer
 
 See: The [LICENCE](https://github.com/joaoribeirodasilva/wait_signals/blob/main/LICENSE) information.
