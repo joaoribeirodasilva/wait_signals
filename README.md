@@ -1,6 +1,6 @@
 # Wait Signal
 
-![Tests](https://github.com/joaoribeirodasilva/wait_signals/actions/workflows/go.yml/badge.svg)
+![Tests](https://github.com/joaoribeirodasilva/wait_signals/actions/workflows/test_wait_signal.yml/badge.svg)
 
 This library has a BSD 3-Clause License.
 
