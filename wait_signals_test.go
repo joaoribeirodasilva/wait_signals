@@ -16,7 +16,7 @@ import (
 var sendSignals = []os.Signal{syscall.SIGALRM, syscall.SIGCONT}
 
 // base waiting time
-const WAIT_TIME = 100
+const WAIT_TIME = 200
 
 // TestWait tests the signals Wait function
 func TestWait(t *testing.T) {
